@@ -1,0 +1,5 @@
+FROM maven:3.5-jdk-8-alpine
+COPY . /usr/src/javaspring/src
+COPY pom.xml /usr/src/javaspring
+RUN mvn -f /usr/src/javaspring/pom.xml clean install
+
